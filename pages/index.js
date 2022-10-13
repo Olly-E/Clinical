@@ -38,6 +38,20 @@ export default function Home() {
                   </Watchvideo>
                   
                 </ActionBut>
+                <Acheivement>
+                  <div className='acheivment'>
+                    <div className='plusDiv'><span style={{fontSize: '1.2rem', color: 'hsl(169deg 84% 36%)' }}>+</span><span>20</span></div>
+                    <p>Years Of Experience</p>
+                  </div>
+                  <div className='acheivment'>
+                    <div className='plusDiv'><span  style={{fontSize: '1.2rem', color: 'hsl(169deg 84% 36%)' }}>+</span><span>20</span></div>
+                    <p>Our Awesome Expert</p>
+                  </div>
+                  <div className='acheivment'>
+                    <div className='plusDiv'><span style={{ fontSize: '1.2rem', color: 'hsl(169deg 84% 36%)'}}>+</span><span>20</span></div>
+                    <p>Happy Customer</p>
+                  </div>
+                </Acheivement>
                 </section>
               </div>
             </Div1>
@@ -116,7 +130,7 @@ const ActionBut = styled.div`
   gap: 3rem;
   margin-left: 12.5rem;
   box-sizing: border-box;
-  margin-top: 0;
+  margin-top: -1rem;
   p {
     background: var(--primary);
     color: black;
@@ -132,7 +146,7 @@ const Watchvideo =  styled.div`
   align-items: center;
   display: flex;
     span{
-      padding: 0.8rem;
+      padding: 0.5qrem;
       border-radius: 100%;
       border: 4px solid hsl(24deg 49% 94%);
       display: flex;
@@ -147,5 +161,30 @@ const Watchvideo =  styled.div`
    color: black;
    margin-left: -0.5rem;
    padding: 0.4rem 0;
+  }
+`;
+const Acheivement = styled.div`
+  display: flex;
+  margin-left: 12.5rem;
+  box-sizing: border-box;
+  gap: 4rem;
+  margin-top: 2.5rem;
+  .acheivment {
+    width: 8rem;
+    
+    
+    .plusDiv {
+      display: flex;
+      align-items: center;
+    }
+    span {
+      font-weight: 600;
+      font-size: 2rem;
+    }
+    p{
+      margin-top: 0;
+      font-weight: 500;
+      line-height: 1.4rem;
+    }
   }
 `;
