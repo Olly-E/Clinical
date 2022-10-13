@@ -1,11 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Navbar from './components/Navbar';
+import Navbar from '../components/Navbar';
 import styled from "styled-components";
+import {BsPlayFill} from 'react-icons/bs'
 
 
 
 export default function Home() {
+    
   return (
     <div >
       <Head>
@@ -14,8 +16,33 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomeDiv>
+      <Navbar />
           <FirstView>
-            <Navbar />
+            <Div1>
+              <div>
+                <h1>Find The best
+                Barber Shop</h1> 
+                <ForYou>For You</ForYou>
+                <section>
+                <Description>
+                  haircut Services For men and women. Where here the customers hair, saclp, Face and body can be 
+                  pampered, with the best servicess and facilities
+                </Description>
+                <ActionBut>
+                  <p>Book Now</p>
+                  <Watchvideo>
+                    <span>
+                      <BsPlayFill />
+                    </span>
+                    <p>Watch Video</p>
+                  </Watchvideo>
+                  
+                </ActionBut>
+                </section>
+              </div>
+            </Div1>
+            <Div2>
+            </Div2>
           </FirstView>
       </HomeDiv>
     </div>
@@ -27,4 +54,98 @@ const HomeDiv = styled.div`
 `;
 const FirstView = styled.div`
   height: 100vh;
+  display: flex;
+  /* position: relative; */
+`;
+
+const Div1 = styled.div`
+    background: white;
+    width: 50%;
+    padding-left: 13rem;
+    box-sizing: border-box;
+    section {
+      position: absolute;
+      left: 1rem;
+      width: max-content;
+      background: transparent;
+    }
+    h1{
+      margin-top: 10rem;
+      color: black; 
+      font-size: 7rem;
+      font-weight: 500;
+      line-height: 7rem;
+      width: 1000px;
+      word-spacing: 5px;
+      letter-spacing: 1px;
+      margin-bottom: 0;
+      z-index: 10;
+    }
+`;
+
+const Div2 = styled.div`
+  background: hsl(24deg 49% 94%);
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 10rem;
+    z-index: -1;
+`;
+
+const ForYou = styled.p` 
+  font-family: 'Qwigley';
+  font-weight: 500;
+  font-size: 9rem;
+  color: var(--primary);
+  margin: 0;
+  margin-top: -4rem;
+  margin-left: -1rem;
+  /* text-decoration: underline; */
+  /* text-decoration-thickness: 2px; */
+`
+
+const Description = styled.h5`
+  width: 30rem;
+  font-weight: 500;
+  margin-top: -2rem;
+  margin-left: 12.5rem;
+  font-size: 1rem;
+`;
+const ActionBut = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-left: 12.5rem;
+  box-sizing: border-box;
+  margin-top: 0;
+  p {
+    background: var(--primary);
+    color: black;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+    color: white;
+    box-shadow: 1px 0px 1px gray;
+  }
+`;
+
+const Watchvideo =  styled.div`
+  align-items: center;
+  display: flex;
+    span{
+      padding: 0.8rem;
+      border-radius: 100%;
+      border: 4px solid hsl(24deg 49% 94%);
+      display: flex;
+      justify-self: center;
+      align-items: center;
+      font-size: 1.5rem;
+    }
+  p {
+   background: white;
+   box-shadow: none;
+   font-weight: 600;
+   color: black;
+   margin-left: -0.5rem;
+   padding: 0.4rem 0;
+  }
 `;
