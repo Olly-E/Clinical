@@ -4,11 +4,11 @@ import {FiSearch}  from 'react-icons/fi'
 export default function Navbar() {
   return (
     <Nav>
-        <div>
-            <p>Home</p>
-            <p>Galley</p>
-            <p>Services</p>
-            <p>AboutUs</p>
+        <div className="navs">
+                <p>Home</p>
+                <p>Galley</p>
+                <p>Services</p>
+                <p>AboutUs</p>
         </div>
         <LogoName>
             <h1>Milo</h1>
@@ -30,12 +30,38 @@ const Nav = styled.div`
     padding: 1.5rem 13rem;
     justify-content: space-between;
     box-sizing: border-box;
-
-    div:nth-of-type(1) {
+    user-select: none;
+    .navs {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     font-weight: 600;
+    p {
+        display: flex;
+        flex-direction: column;
+
+        :after{
+            content: '';
+            width: 0;
+            border-bottom: 2px solid var(--primary);
+            transition: all 200ms ease-in-out;
+            
+        }
+        :hover:after {
+            width: 20px;
+            
+        }
+    }
+
+    .singleNav {
+        display: flex;
+        justify-content: start;
+        span {
+            width: 2rem;
+            height:0;
+            border-bottom: 2px solid black;
+        }
+    }
   }
 `;
 const LogoName = styled.div`

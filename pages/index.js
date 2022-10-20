@@ -43,12 +43,14 @@ export default function Home() {
                     <div className='plusDiv'><span style={{fontSize: '1.2rem', color: 'hsl(169deg 84% 36%)' }}>+</span><span>20</span></div>
                     <p>Years Of Experience</p>
                   </div>
+                  <span style={{borderLeft: '3px solid hsl(24deg 49% 94%)', height: '5rem', width: '0'}}/>
                   <div className='acheivment'>
-                    <div className='plusDiv'><span  style={{fontSize: '1.2rem', color: 'hsl(169deg 84% 36%)' }}>+</span><span>20</span></div>
+                    <div className='plusDiv'><span  style={{fontSize: '1.2rem', color: 'hsl(169deg 84% 36%)' }}>+</span><span>80</span></div>
                     <p>Our Awesome Expert</p>
                   </div>
+                  <span style={{borderLeft: '3px solid hsl(24deg 49% 94%)', height: '5rem', width: '0'}}/>
                   <div className='acheivment'>
-                    <div className='plusDiv'><span style={{ fontSize: '1.2rem', color: 'hsl(169deg 84% 36%)'}}>+</span><span>20</span></div>
+                    <div className='plusDiv'><span style={{ fontSize: '1.2rem', color: 'hsl(169deg 84% 36%)'}}>+</span><span>20K</span></div>
                     <p>Happy Customer</p>
                   </div>
                 </Acheivement>
@@ -146,9 +148,9 @@ const Watchvideo =  styled.div`
   align-items: center;
   display: flex;
     span{
-      padding: 0.5qrem;
+      padding: 0.5rem;
       border-radius: 100%;
-      border: 4px solid hsl(24deg 49% 94%);
+      border: 3px solid hsl(24deg 49% 94%);
       display: flex;
       justify-self: center;
       align-items: center;
@@ -167,12 +169,15 @@ const Acheivement = styled.div`
   display: flex;
   margin-left: 12.5rem;
   box-sizing: border-box;
-  gap: 4rem;
+  gap: 1rem;
   margin-top: 2.5rem;
+  align-items: center;
+  
   .acheivment {
     width: 8rem;
-    
-    
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
     .plusDiv {
       display: flex;
       align-items: center;
@@ -185,6 +190,10 @@ const Acheivement = styled.div`
       margin-top: 0;
       font-weight: 500;
       line-height: 1.4rem;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
     }
+    
   }
 `;
