@@ -2,12 +2,18 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../components/Navbar';
 import styled from "styled-components";
-import {BsPlayFill} from 'react-icons/bs'
-
+import {BsPlayFill} from 'react-icons/bs';
+import style1 from '../assets/style1.jpg'
+import style2 from '../assets/style2.jpg'
+// import style3 from '../assets/style3.jpg'
+// import style4 from '../assets/style4.jpg'
+import style5 from '../assets/style5.jpg'
+// import style6 from '../assets/style6.jpg'
 
 
 export default function Home() {
     
+  
   return (
     <div >
       <Head>
@@ -58,6 +64,18 @@ export default function Home() {
               </div>
             </Div1>
             <Div2>
+              <BigContainer>
+                <ImageContainer1>
+                  <Image width={400} height={550} className="image1" objectFit='cover' src={style2}/>
+                </ImageContainer1>
+                <ImageContainer2>
+                  <Image width={400} height={550} className="image1" objectFit='cover' src={style1}/>
+                </ImageContainer2>
+                <ImageContainer3>
+                  <Image width={400} height={550} className="image1" objectFit='cover' src={style5}/>
+                </ImageContainer3>
+                <div className='circle'><h3>Show more</h3></div>
+              </BigContainer>
             </Div2>
           </FirstView>
       </HomeDiv>
@@ -79,6 +97,7 @@ const Div1 = styled.div`
     width: 50%;
     padding-left: 13rem;
     box-sizing: border-box;
+    z-index: 500;
     section {
       position: absolute;
       left: 1rem;
@@ -99,13 +118,6 @@ const Div1 = styled.div`
     }
 `;
 
-const Div2 = styled.div`
-  background: hsl(24deg 49% 94%);
-    width: 50%;
-    box-sizing: border-box;
-    padding-right: 10rem;
-    z-index: -1;
-`;
 
 const ForYou = styled.p` 
   font-family: 'Qwigley';
@@ -136,8 +148,8 @@ const ActionBut = styled.div`
   p {
     background: var(--primary);
     color: black;
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
+    padding: 1rem 2.2rem;
+    font-size: 0.8rem;
     border-radius: 0.4rem;
     color: white;
     box-shadow: 1px 0px 1px gray;
@@ -196,4 +208,81 @@ const Acheivement = styled.div`
     }
     
   }
+`;
+const Div2 = styled.div`
+  background: hsl(24deg 49% 94%);
+    width: 50%;
+    padding-right: 10rem;
+   display: flex; 
+   align-items: center;
+   justify-content: center;
+   .test {
+    :hover {
+      color:blue;
+    }
+   }
+`;
+const BigContainer = styled.div`
+  position: relative;
+  top: 0;
+  z-index: 300;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .circle {
+    padding: 2.3rem;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    z-index: 5;
+    background-color: #040404;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='p' width='250' height='30' patternUnits='userSpaceOnUse' patternTransform='rotate(49) scale(0.62)'%3E%3Cpath id='a' data-color='outline' fill='none' stroke='%23323232' stroke-width='1.43' d='M-62.5-15C-31.3-15 0-7.5 0-7.5S31.3 0 62.5 0 125-7.5 125-7.5s31.3-7.5 62.5-7.5S250-7.5 250-7.5 281.3 0 312.5 0'%3E%3C/path%3E%3Cuse xlink:href='%23a' y='15'%3E%3C/use%3E%3Cuse xlink:href='%23a' y='30'%3E%3C/use%3E%3Cuse xlink:href='%23a' y='45'%3E%3C/use%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23p)' width='100%25' height='100%25'%3E%3C/rect%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 10rem;
+    margin-right: 25rem;
+    border: 8px solid hsl(24deg 49% 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 400ms ease-in-out;
+
+    :hover {
+      transform: scale(1.5);
+      border: none;
+      h3{
+        display: none;
+      }
+    }
+    
+    
+    h3 {
+      line-height: 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transform: rotate(-30deg);
+      color: white;
+      transition: all 400ms ease-in-out;
+    }
+  }
+`;
+const ImageContainer1 =  styled.div`
+  margin-left: 1rem;
+ position: absolute;
+ margin-top: 2.8rem;
+  transform: rotate(-8deg);
+`;
+const ImageContainer2 =  styled.div`
+  margin-left: 1rem;
+ position: absolute;
+ margin-top: 2.8rem;
+`;
+const ImageContainer3 =  styled.div`
+  margin-left: 1rem;
+   position: absolute;
+   margin-top: 2.8rem;
+   transform: rotate(8deg);
 `;

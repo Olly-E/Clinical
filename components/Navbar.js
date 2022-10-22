@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import {FiSearch}  from 'react-icons/fi'
+import {FiSearch}  from 'react-icons/fi';
+
 
 export default function Navbar() {
   return (
@@ -31,6 +32,7 @@ const Nav = styled.div`
     justify-content: space-between;
     box-sizing: border-box;
     user-select: none;
+    z-index: 600;
     .navs {
     display: flex;
     align-items: center;
@@ -39,7 +41,7 @@ const Nav = styled.div`
     p {
         display: flex;
         flex-direction: column;
-
+        
         :after{
             content: '';
             width: 0;
